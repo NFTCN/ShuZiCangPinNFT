@@ -1,0 +1,14 @@
+/nbproject/
+/thinkphp/
+/vendor/
+/runtime/*
+/public/uploads/*
+.idea
+composer.lock
+*.log
+*.css.map
+!.gitkeep
+.env
+.svn
+.vscode
+node_modules
