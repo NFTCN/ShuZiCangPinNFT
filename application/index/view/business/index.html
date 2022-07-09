@@ -1,0 +1,107 @@
+<div id="content-container" class="container">
+    <div class="user-section">
+        <div class="login-main">
+            <form name="form" id="form" class="form-vertical" method="POST" action="">
+                <!--@IndexLoginFormBegin-->
+                <input type="hidden" name="url" value="{$url|htmlentities}"/>
+                {:token()}
+                <div class="panel panel-default">
+                    <div class="panel-heading">您的基本信息</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class="control-label label-required" for="account">{:__('Account')}</label>
+                            <div class="controls">
+                                <input class="form-control" id="account" type="text" name="row[account]" value="" data-rule="required" placeholder="{:__('Email/Mobile/Username')}" autocomplete="off">
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="identify">{:__('Identify')}</label>
+                            <div class="controls">
+                                <input class="form-control" id="identify" type="text" name="row[identify]" value=""  placeholder="{:__('Identify')}" autocomplete="off">
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label label-required" for="people">{:__('People')}</label>
+                            <div class="controls">
+                                <input class="form-control" id="people" type="text" name="row[people]" value="" data-rule="required" placeholder="{:__('People')}" autocomplete="off">
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label label-required" for="mobile">{:__('Mobile')}</label>
+                            <div class="controls">
+                                <input class="form-control" id="mobile" type="text" name="row[mobile]" value="" data-rule="required|mobile" placeholder="{:__('Mobile')}" autocomplete="off">
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label label-required" for="email">{:__('Email')}</label>
+                            <div class="controls">
+                                <input class="form-control" id="email" type="text" name="row[email]" value="" data-rule="required|email" placeholder="{:__('Email')}" autocomplete="off">
+                                <div class="help-block"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">拟合作IP信息</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class="control-label label-required" for="account">{:__('Ip type')}</label>
+                            <div class="controls">
+                                {:Form::radios('row[ip]',$ip_type, '', ['data-rule'=>'required'])}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label label-required" for="ip-name">{:__('Ip name')}</label>
+                            <div class="controls">
+                                {:Form::text('row[ip_name]', '', ['data-rule'=>'required','rows'=>10])}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="ip-describe">{:__('Ip describe')}</label>
+                            <div class="controls">
+                                {:Form::textarea('row[ip_describe]', '', ['rows'=>10])}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="account">{:__('Ip platform')}</label>
+                            <div class="controls">
+                                {:Form::checkboxs('row[ip_platform]', $ip_platform,'')}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="ip-works">{:__('Ip works')}</label>
+                            <div class="controls">
+                                {:Form::textarea('row[ip_works]', '', ['rows'=>10])}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="account">{:__('Ip relation')}</label>
+                            <div class="controls">
+                                {:Form::radios('row[ip_relation]', $ip_relation, '')}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">其它信息</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class="control-label label-required" for="account">{:__('Source')}</label>
+                            <div class="controls">
+                                {:Form::radios('row[source]', $other, '', ['data-rule'=>'required'])}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">提交</button>
+                </div>
+                <!--@IndexLoginFormEnd-->
+            </form>
+        </div>
+    </div>
+</div>

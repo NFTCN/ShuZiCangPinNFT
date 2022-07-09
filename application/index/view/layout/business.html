@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {include file="common/meta" /}
+        <link href="__CDN__/assets/css/user.css?v={$Think.config.site.version|htmlentities}" rel="stylesheet">
+    </head>
+    <style>
+        .header-text{
+            text-align: center;
+            color: #0c6ec8;
+        }
+        .label-required::before{
+            content: "*";
+            left: -0.5rem;
+            position: relative;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+
+    <body>
+    <div class="row">
+        <div class="page-header header-text">
+            <h1>数字藏品平台IP入驻</h1>
+            <h1>申请信息采集</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-xs-1"></div>
+        <div class="col-md-8 col-xs-10">
+            <p class="lead">
+                {:$remind}
+            </p>
+        </div>
+    </div>
+
+        <main class="content">
+            {__CONTENT__}
+        </main>
+
+        <footer class="footer" style="clear:both">
+            <p class="copyright">Copyright&nbsp;©&nbsp;{:date("Y")} {$site.name|htmlentities} All Rights Reserved <a href="https://beian.miit.gov.cn" target="_blank">{$site.beian|htmlentities}</a></p>
+        </footer>
+
+        {include file="common/script" /}
+
+    </body>
+</html>

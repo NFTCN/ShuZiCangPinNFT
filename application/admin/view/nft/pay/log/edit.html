@@ -1,0 +1,112 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_id" data-rule="required" data-source="user/user/index" data-field="nickname" class="form-control selectpage" name="row[user_id]" type="text" value="{$row.user_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-type" data-rule="required" class="form-control" name="row[type]" type="text" value="{$row.type|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ref_type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ref_type" data-rule="required" class="form-control" name="row[ref_type]" type="text" value="{$row.ref_type|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Order_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-order_id" data-rule="required" data-source="order/index" class="form-control selectpage" name="row[order_id]" type="text" value="{$row.order_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Out_trade_no')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-out_trade_no" data-rule="required" class="form-control" name="row[out_trade_no]" type="text" value="{$row.out_trade_no|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-amount" data-rule="required" class="form-control" step="0.01" name="row[amount]" type="number" value="{$row.amount|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Title')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-title" data-rule="required" class="form-control" name="row[title]" type="text" value="{$row.title|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Status')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-status" data-rule="required" class="form-control" name="row[status]" type="number" value="{$row.status|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Msg')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-msg" data-rule="required" class="form-control" name="row[msg]" type="text" value="{$row.msg|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Trade_no')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-trade_no" data-rule="required" class="form-control" name="row[trade_no]" type="text" value="{$row.trade_no|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Trade_create')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-trade_create" class="form-control" name="row[trade_create]" type="number" value="{$row.trade_create|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Trade_payment')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-trade_payment" class="form-control" name="row[trade_payment]" type="number" value="{$row.trade_payment|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Callback')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-callback" data-rule="required" class="form-control" name="row[callback]" type="text" value="{$row.callback|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ori_data')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-ori_data" class="form-control " rows="5" name="row[ori_data]" cols="50">{$row.ori_data|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Lack_ver')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-lack_ver" class="form-control" name="row[lack_ver]" type="number" value="{$row.lack_ver|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Created_at')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-created_at" class="form-control" name="row[created_at]" type="number" value="{$row.created_at|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Updated_at')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-updated_at" class="form-control" name="row[updated_at]" type="number" value="{$row.updated_at|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

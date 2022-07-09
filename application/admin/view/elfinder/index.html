@@ -1,0 +1,47 @@
+<div class="panel panel-default panel-intro">
+    <script type="text/javascript">
+        var elroot = "__CDN__/assets/addons/elfinder/";
+    </script>
+    <script data-main="__CDN__/assets/addons/elfinder/main.default.js"
+            src="//cdn.bootcdn.net/ajax/libs/require.js/2.3.5/require.min.js">
+    </script>
+    <script type="text/javascript">
+        define('elFinderConfig', {
+            // elFinder options (REQUIRED)
+            // Documentation for client options:
+            // https://github.com/Studio-42/elFinder/wiki/Client-configuration-options
+            defaultOpts: {
+                url: 'elfinder/view' // connector URL (REQUIRED)
+                , commandsOptions: {
+                    edit: {
+                        extraOptions: {
+                            // set API key to enable Creative Cloud image editor
+                            // see https://console.adobe.io/
+                            creativeCloudApiKey: '',
+                            // browsing manager URL for CKEditor, TinyMCE
+                            // uses self location with the empty value
+                            managerUrl: ''
+                        }
+                    }
+                    , quicklook: {
+                        // to enable preview with Google Docs Viewer
+                        googleDocsMimes: ['application/pdf', 'image/tiff', 'application/vnd.ms-office', 'application/msword', 'application/vnd.ms-word', 'application/vnd.ms-excel', 'application/vnd.ms-powerpoint', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.presentationml.presentation']
+                    }
+                },
+                'width': 'auto',
+                'height': '600px',
+            },
+
+            managers: {
+                'elfinder': {},
+            }
+        });
+
+    </script>
+
+    <div class="panel-body">
+        <div id="myTabContent" class="tab-content">
+            <div id="elfinder"></div>
+        </div>
+    </div>
+</div>

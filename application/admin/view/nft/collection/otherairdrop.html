@@ -1,0 +1,25 @@
+<form id="airdrop-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('选择用户')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            {:build_radios('row[type]', ['random'=>__('随机用户'), 'all'=>__('全部用户')], [])}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('空投数量')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-num" class="form-control" name="row[num]" type="number" value="">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

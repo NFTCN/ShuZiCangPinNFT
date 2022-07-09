@@ -1,0 +1,50 @@
+<table class="table table-striped">
+	<tbody>
+		<tr>
+			<td>{:__('Status')}</td>
+			<td>
+				{switch name="row.status"}
+					{case value="created"}<span class="label label-info">{$row.status_text}</span>{/case}
+				    {case value="successed"}<span class="label label-success">{$row.status_text}</span>{/case}
+					{case value="rejected"}<span class="label label-danger">{$row.status_text}</span>{/case}
+				{/switch}
+			</td>
+		</tr>
+		<tr>
+			<td>{:__('User_id')}</td>
+			<td>{$row.user_id|htmlentities}</td>
+		</tr>
+		<tr>
+			<td>{:__('Money')}</td>
+			<td>{$row.money|htmlentities}</td>
+		</tr>
+		<tr>
+			<td>{:__('Handingfee')}</td>
+			<td>{$row.handingfee|htmlentities}</td>
+		</tr>
+		<tr>
+			<td>{:__('Taxes')}</td>
+			<td>{$row.taxes|htmlentities}</td>
+		</tr>
+		<tr>
+			<td>{:__('Type')}</td>
+			<td>{$row.type|htmlentities}</td>
+		</tr>
+		<tr>
+			<td>{:__('Account')}</td>
+			<td>{$row.account|htmlentities}</td>
+		</tr>
+		{eq name="row.status" value="rejected"}
+		<tr>
+			<td>{:__('拒绝理由')}</td>
+			<td>{$row.memo|htmlentities}</td>
+		</tr>
+		{/eq}
+	</tbody>
+</table> 
+<div class="form-group layer-footer">
+	<label class="control-label col-xs-12 col-sm-2"></label>
+	<div class="col-xs-12 col-sm-8">
+		<button type="reset" class="btn btn-primary btn-embossed btn-close" onclick="Layer.closeAll();">{:__('Close')}</button>
+	</div>
+</div>
